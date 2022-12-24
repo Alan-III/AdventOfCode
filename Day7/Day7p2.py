@@ -1,12 +1,7 @@
 contents = []
 readable = True
 f = open("C:\\Users\Alan\Documents\Repos\AdventOfCode\Day7\inputpuzzle1.txt", "r")
-while readable:
-    line = f.readline()
-    if line == '':
-        readable = False
-    else:
-        contents.append(line)
+contents = f.readlines()
 f.close() 
 
 i=2
