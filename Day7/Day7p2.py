@@ -40,10 +40,11 @@ while len(dirorder)-1 > 0:
     dirs[dirorder[len(dirorder)-2]][1] += int(dirs[dirorder[len(dirorder)-1]][1])
     del dirorder[len(dirorder)-1]
 
-k = 0
-sum = 0
+k = 1
+spaceneeded = abs(70000000 - dirs[0][1] - 30000000)
+tempspace = 70000000
 while k < len(dirs):
-    if dirs[k][1] <= 100000:
-        sum += dirs[k][1]
+    if dirs[k][1] >= spaceneeded and tempspace > dirs[k][1]:
+        tempspace = dirs[k][1]
     k += 1
-print(sum)
+print(tempspace)
