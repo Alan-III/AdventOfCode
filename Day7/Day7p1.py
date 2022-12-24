@@ -14,14 +14,6 @@ dirs = [["/",0]]
 line = []
 tempsize = 0
 dirorder = [0]
-updir = thisdir = 0
-
-def findupdir(key):
-    k = 0
-    while k < len(dirs):
-        if key in dirs[k][2:]:
-            return k
-        k += 1
 
 while i < len(contents):
     line = contents[i].split(' ')
